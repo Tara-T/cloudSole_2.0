@@ -1,15 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
-import { Sneaker } from "../models/sneaker";
-import { SneakerCard } from "../components/SneakerCard";
-
+import { useParams } from "react-router-dom";
+import { Sneaker } from "../../models/sneaker";
+import { SneakerCard } from "../../components/SneakerCard";
 
 export default function Brand() {
 	//gets the paremeter of button clicked
 	const params = useParams();
-	const paramsCapitalBrand = params.brand.charAt(0).toUpperCase() + params.brand.slice(1);
+	const paramsCapitalBrand =
+		params.brand.charAt(0).toUpperCase() + params.brand.slice(1);
 	//sets the state for sneakers as an empty array (find out why states are nesecary)
 	const [sneakers, setSneakers] = useState([]);
 	// sets the loading state as true
@@ -17,7 +17,7 @@ export default function Brand() {
 
 	//this is run after the page is renderd
 	useEffect(() => {
-		//then gets the brand by button clicked 
+		//then gets the brand by button clicked
 		Sneaker.findAllByBrand(paramsCapitalBrand).then((sneakers) => {
 			//sets sneaker state as an array with sneakers
 			setSneakers(sneakers);
@@ -28,15 +28,15 @@ export default function Brand() {
 			console.debug(paramsCapitalBrand);
 		});
 	}, []);
-	
+
 	return (
 		<div>
 			<h1>{paramsCapitalBrand}</h1>
 			{/* if state loading = true then do <p>loading</p> */}
 			{loading ? (
 				<p>Loading...</p>
-				//else if (not sure whats the if)(if sneaker length is more than 0?)print our card
-			) : sneakers.length ? (
+			) : //else if (not sure whats the if)(if sneaker length is more than 0?)print our card
+			sneakers.length ? (
 				//map() makes new array from sneakers?
 				sneakers.map((sneaker) => <SneakerCard key={sneaker.id} {...sneaker} />)
 			) : (
