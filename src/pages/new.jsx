@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Sneaker } from "../models/sneaker";
 import { SneakerCard } from "../components/SneakerCard";
-import React from 'react'
+import React from "react";
 
 export default function New() {
 	const [sneakers, setSneakers] = useState([]);

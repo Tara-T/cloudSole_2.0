@@ -1,46 +1,46 @@
 footer {
-  /* find better image transparent perferably */
-  background-image: url(../pictures/pastel-blue2.jpg);
+	/* find better image transparent perferably */
+	background-image: url(../pictures/pastel-blue2.jpg);
 }
 
 /* change name and figure out what if does */
- .flex {
-    display: flex;
-    margin: 0%;
-  } 
+.flex {
+	display: flex;
+	margin: 0%;
+}
 .flexfooter {
-  display: flex;
-  justify-content: space-between;
-  margin: 5%;
-  margin-bottom: 0%;
-  padding-right: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin: 5%;
+	margin-bottom: 0%;
+	padding-right: 20px;
 }
 /* check why all the changes */
 .parfooter {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 12px;
-  color: #363c3f;
-  margin: 5%;
-  width: 50%;
-  margin-right: 30%;
-  margin-bottom: 20%;
-  margin-top: 0%;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 12px;
+	color: #363c3f;
+	margin: 5%;
+	width: 50%;
+	margin-right: 30%;
+	margin-bottom: 20%;
+	margin-top: 0%;
 }
 
 .words h3 {
-  color: rgb(218, 56, 170);
+	color: rgb(218, 56, 170);
 }
 .words h3:hover {
-  text-decoration: underline solid rgb(218, 56, 170) 4px;
+	text-decoration: underline solid rgb(218, 56, 170) 4px;
 }
 .socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  float: right;
-  margin: 0%;
-  margin-right: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	float: right;
+	margin: 0%;
+	margin-right: 5%;
 }
 .socials img {
-  width: 80%;
+	width: 80%;
 }
