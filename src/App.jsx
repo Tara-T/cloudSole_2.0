@@ -8,13 +8,14 @@ import Brand from "./pages/brand/[brand]";
 import Shoe from "./pages/shoe/[shoe]";
 import Navbar from "./components/nav";
 import Footer from "./components/footer";
+import Cart from "./pages/cart"
 
-// doesn't work without this and i don't know why
-// it was supposed to be imported in the main.jsx file and now it has to be imported everywhere
 import React, { useState, useEffect } from "react";
 
 function App() {
+	// sets hideNavBar state (states "save" data between function calls)
 	const [hideNavBar, setHideNavBar] = useState(false);
+
 	const { pathname } = useLocation();
 
 	useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
 			else {
 				setHideNavBar(false);
 			}
+			// checks every time a button is clicked
 	}, [pathname, setHideNavBar]);
 
 	return (
@@ -34,13 +36,13 @@ function App() {
 					"" : 
 					<Navbar />
 			}
-			{/* uses the css in utilis.module.css (does it have to be called like that?) and what does it do and why */}
 			<div /*  className={utilsStyles.container}*/>
 				{/* im guseing routes just is just a container for several route(s) */}
 				<Routes>
 					{/* renders the files */}
 					<Route path="/" element={<Index />} />
 					<Route path="/new" element={<New />} />
+					<Route path="/cart" element={<Cart />} />
 					<Route path="/brand/:brand" element={<Brand />} />
 					<Route path="/shoe/:shoe" element={<Shoe />} />
 				</Routes>

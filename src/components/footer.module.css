@@ -1,13 +1,13 @@
 footer {
 	/* find better image transparent perferably */
-	background-image: url(../pictures/pastel-blue2.jpg);
+	background-image: url(../../pastel-blue2.jpg);
 }
 
 /* change name and figure out what if does */
 .flex {
-	display: flex;
-	margin: 0%;
+	display: flex;	
 }
+
 .flexfooter {
 	display: flex;
 	justify-content: space-between;
@@ -17,14 +17,11 @@ footer {
 }
 /* check why all the changes */
 .parfooter {
-	font-family: "Ubuntu", sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	color: #363c3f;
-	margin: 5%;
 	width: 50%;
-	margin-right: 30%;
-	margin-bottom: 20%;
-	margin-top: 0%;
+	margin: 0 30% 15% 5%;
+	
 }
 
 .words h3 {

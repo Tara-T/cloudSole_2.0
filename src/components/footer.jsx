@@ -1,10 +1,6 @@
-import styles from "./footer.module.css";
 import React from "react";
-import { Link } from "react-router-dom";
-
-import facebook from "../public/fb2.png";
-import pinterest from "../public/pinterest2.png";
-import instagram from "../public/insta2.png";
+// import css 
+import styles from "./footer.module.css";
 
 export default function Footer() {
 	return (
@@ -20,18 +16,18 @@ export default function Footer() {
 			<div className={styles.flex}>
 				<div className={styles.parfooter}>
 					<p>
-						{" "}
+
 						Cloud sole is the most kawaii pastel themed sneaker shop on the
 						internet.
 					</p>
 					<p>
-						{" "}
+
 						We have a wide assortment of sneakers from the most basic Nikesb
 						Stefan Janoski black and white to Nikedunk Jeff Staple pigeons that
 						there were only 150 paris ever made.
 					</p>
 					<p>
-						{" "}
+
 						We offer a gread deal of very unique pairs of snekers of which many
 						are collaboration between other companies and designers.
 					</p>
@@ -39,18 +35,18 @@ export default function Footer() {
 
 				<div className={styles.socials}>
 					<SocialsItem
-						to="https://www.facebook.com/nike"
-						src={facebook}
+						href="https://www.facebook.com/nike"
+						src={"/fb2.png"}
 						alt="Facebook pastel icon"
 					/>
 					<SocialsItem
-						to="https://www.pinterest.com/sianaakim/pastel-streetwear/"
-						src={pinterest}
+						href="https://www.pinterest.com/phienterest/sneakers/"
+						src={"/pinterest2.png"}
 						alt="Pinterest pastel icon"
 					/>
 					<SocialsItem
-						to="https://www.instagram.com/_trobos_/"
-						src={instagram}
+						href="https://www.instagram.com/nike/"
+						src={"/insta2.png"}
 						alt="Instagram pastel icon"
 					/>
 				</div>
@@ -58,13 +54,13 @@ export default function Footer() {
 		</footer>
 	);
 }
-
-function SocialsItem({ to, src, alt }) {
+// make a template for footer links 
+function SocialsItem({ href, src, alt }) {
 	return (
 		<div>
-			<Link to={to}>
+			<a href={href}>
 				<img src={src} alt={alt} />
-			</Link>
+			</a>
 		</div>
 	);
 }

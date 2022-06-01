@@ -1,6 +1,46 @@
-.card {
-	width: 200px;
-	background-color: lightblue;
+.sneakerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-self: center;
+  gap: 20px;
+  padding: 5%;
+
+  bottom: 0;
+  background-color: #ead6f0;
+}
+.sneakerGrid img {
+  max-width: 100%;
+  border-radius: 20px
+}
+.price {
+  text-decoration: none;
+  font-size: 20px;
+  color: #64bbf0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.btn {
+  background: #64bbf0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
+  width: 80px;
+  height: 20px;
+  border-radius: 5px;
+  margin-left: 60%;
+}
+
+.btn, .price {
 	display: inline-block;
-	margin: 20px;
+	
+	
+}
+.btn:hover {
+  transform: scale(0.9);
+}
+
+a {
+  text-decoration: none;
 }

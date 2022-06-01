@@ -9,9 +9,11 @@
 	},
 	"dependencies": {
 		"firebase": "^9.8.1",
+		"lighthouse": "^9.6.1",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
-		"react-router-dom": "6"
+		"react-router-dom": "6",
+		"react-slideshow-image": "^3.7.5"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.0",
