@@ -18,6 +18,7 @@ export default function Brand() {
 	const [loading, setLoading] = useState(true);
 
 	//this is run after the page is renderd
+	//mounts the sneaker element and updates it if needed 
 	useEffect(() => {
 		//then gets the brand by button clicked
 		Sneaker.findAllByBrand(paramsCapitalBrand).then((sneakers) => {
@@ -49,7 +50,7 @@ export default function Brand() {
 			{/* if state loading = true then do <p>loading</p> */}
 			{loading ? (
 				<p>Loading...</p>
-			) : //else if (not sure whats the if)(if sneaker length is more than 0?)print our card
+			) : 
 				sneakers.length ? (
 				<div className={styles.sneakerGrid}>
 

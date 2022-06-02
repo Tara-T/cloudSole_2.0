@@ -16,9 +16,18 @@ export function SneakerCard({
 				
 			</Link>
 			<h4 className={styles.price}>{price} kr</h4>
-			<button className={styles.btn} /* onClick={addtocart('${id}')} */>
+			<button className={styles.btn}  onClick={() => addToCart(id)} >
 				Add to cart
 			</button>
 		</div>
 	);
 }
+
+function addToCart(sneakerId) {
+    const cartJSON = sessionStorage.getItem("cart")
+    const cart = JSON.parse(cartJSON)
+    cart.push(sneakerId)
+    sessionStorage.setItem("cart", JSON.stringify(cart))
+	console.debug(cart)
+
+  }

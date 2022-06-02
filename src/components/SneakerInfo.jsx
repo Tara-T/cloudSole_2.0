@@ -2,6 +2,8 @@ import styles from "./SneakerInfo.module.css";
 import React from "react";
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
+import { Sneaker } from '../models/sneaker.js'
+
 
 export function SneakerInfo({
     articleno,
@@ -20,6 +22,7 @@ export function SneakerInfo({
     picture,
     price,
     style,
+    id,
 }) {
     const zoomOutProperties = {
         transitionDuration: 500,
@@ -66,7 +69,7 @@ export function SneakerInfo({
                     <button>45.5</button>
                     <button>47</button>
                 </div>
-                <button className={styles.btn}  /* onClick={alert("reservation added")} */  id="addtocart">ADD TO CART</button>
+                <button className={styles.btn}   onClick={() => addToCart(id)} >ADD TO CART</button>
                 <h3>Information about the product</h3>
                 <p>{description}</p>
                 <hr />
@@ -82,4 +85,12 @@ export function SneakerInfo({
         </div>
     );
 }
+function addToCart(sneakerId) {
+    const cartJSON = sessionStorage.getItem("cart")
+    const cart = JSON.parse(cartJSON || "[]")
+    cart.push(sneakerId)
+    sessionStorage.setItem("cart", JSON.stringify(cart))
+    console.debug(cart)
+  }
+  
 

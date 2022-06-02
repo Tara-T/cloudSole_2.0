@@ -9,7 +9,7 @@ import "./main.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
 	// aditional checks and warnings
 	<React.StrictMode>
-		{/* keeps the UI in sync with URL  (whatever that means)*/}
+		{/* keeps the UI in sync with URL */}
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>

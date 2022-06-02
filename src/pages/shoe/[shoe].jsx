@@ -19,7 +19,7 @@ export default function Shoe() {
 		//then gets the brand by button clicked
 		Sneaker.findById(params.shoe).then((sneaker) => {
 			//sets sneaker state as an array with sneakers
-			setSneaker(sneaker);
+			setSneaker({...sneaker, id: params.shoe})
 			//cancels the loading state
 			setLoading(false);
 
@@ -34,7 +34,7 @@ export default function Shoe() {
 			{loading ? (
 				<p>Loading...</p>
 			) : sneaker ? (
-				//i'll deal with this later
+				//diplays the shoe
 				<SneakerInfo key={sneaker.id} {...sneaker}/>
 			) : (
 				//else displays that

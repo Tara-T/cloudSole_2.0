@@ -21,12 +21,12 @@ footer {
 	color: #363c3f;
 	width: 50%;
 	margin: 0 30% 15% 5%;
-	
 }
 
 .words h3 {
 	color: rgb(218, 56, 170);
 }
+
 .words h3:hover {
 	text-decoration: underline solid rgb(218, 56, 170) 4px;
 }
