@@ -9,6 +9,8 @@ import Shoe from "./pages/shoe/[shoe]";
 import Navbar from "./components/nav";
 import Footer from "./components/footer";
 import Cart from "./pages/cart"
+import Checkout from "./pages/checkout"
+
 
 import React, { useState, useEffect } from "react";
 
@@ -45,6 +47,7 @@ function App() {
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/brand/:brand" element={<Brand />} />
 					<Route path="/shoe/:shoe" element={<Shoe />} />
+					<Route path="/checkout" element={<Checkout />} />
 				</Routes>
 			</div>
 			<Footer />

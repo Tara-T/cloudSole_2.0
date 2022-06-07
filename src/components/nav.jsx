@@ -20,10 +20,6 @@ export default function Navbar() {
 				<NavItem name="Nike" to="/brand/nike" />
 				<NavItem name="Nike dunk" to="/brand/nike-dunk" />
 				<Link to="cart"> <i className="material-icons" id={styles.shoppingIcon}>shopping_basket</i></Link>
-				<label className={styles.switch}>
-					<input type="checkbox" id={styles.colorPreferance} />
-					<span className={`${styles.slider} ${styles.round}`}></span>
-				</label>
 			</nav>
 		</div>
 	);

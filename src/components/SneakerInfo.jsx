@@ -2,7 +2,6 @@ import styles from "./SneakerInfo.module.css";
 import React from "react";
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
-import { Sneaker } from '../models/sneaker.js'
 
 
 export function SneakerInfo({
@@ -91,6 +90,7 @@ function addToCart(sneakerId) {
     cart.push(sneakerId)
     sessionStorage.setItem("cart", JSON.stringify(cart))
     console.debug(cart)
+    
   }
   
 

@@ -1,0 +1,62 @@
+.cartPage {
+  margin: 80px 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cartInfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background: #64bbf0;
+}
+td {
+  padding: 10px 5px;
+}
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+td a {
+  color: #64bbf0;
+  font-size: 12px;
+}
+td img {
+  width: 20%;
+  margin-right: 10px;
+}
+.totalPrice {
+  display: flex;
+  justify-content: flex-end;
+}
+.totalPrice table {
+  border-top: 3px solid #7d79ce;
+  width: 100%;
+  max-width: 30%;
+}
+td:last-child {
+  text-align: right;
+}
+h4#price {
+  margin-top: 2%;
+}
+.shoe{
+    display: block;
+    margin-left: 5%;
+  }
+.container {
+    margin: 5% 20%;
+}
+h4 {
+    font-size: 20px;
+}
+button {
+    color: blue;
+    background-color: black;
+}
