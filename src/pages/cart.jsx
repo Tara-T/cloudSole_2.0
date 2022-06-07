@@ -14,7 +14,11 @@ export default function Cart() {
     const [loading, setLoading] = useState(true)
 
     //this is run after the page is rendered
-    const ids = JSON.parse(sessionStorage.getItem("cart"));
+    const cartJSON = sessionStorage.getItem("cart");
+
+    let ids = [];
+    if (cartJSON) ids = JSON.parse(cartJSON);
+
     console.debug(ids)
     useEffect(() => {
         // An array where all "promises" will go
@@ -31,6 +35,10 @@ export default function Cart() {
 
     }, [])
 
+    useEffect(() => {
+        sessionStorage.setItem("cart", JSON.stringify(sneakers.map(sneaker => sneaker.id)))
+    }, [sneakers]);
+
     return (
         <div>
             {/* <h1>{sneaker && sneaker.name}</h1> */}
@@ -40,7 +48,7 @@ export default function Cart() {
             ) : sneakers ? (
                 <div className={styles.container}>
 
-                    {sneakers.map((sneaker) => <CartItem key={sneaker.id} {...sneaker} />)} 
+                    {sneakers.map((sneaker) => <CartItem key={sneaker.id} {...sneaker} setSneakers={setSneakers} sneakers={sneakers} />)} 
                     
                     <h2>Pris 1000</h2> {/* maybe this isn't a good idea  */}
                     <Link  to="/checkout" >Go To Payment</Link>

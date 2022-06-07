@@ -40,7 +40,7 @@ export class Sneaker {
 
   static async findById(id) {
     const document = await getDoc(doc(db, Sneaker.collection.path, id));
-    return { ...document.data(), id: doc.id };
+    return { ...document.data(), id: document.id };
   }
 
   static async findAllRecomended() {

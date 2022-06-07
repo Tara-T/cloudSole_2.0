@@ -2,9 +2,12 @@ import React from "react";
 import styles from "./cartItem.module.css"
 
 export function CartItem({
+    id,
     name,
     price,
     picture,
+    sneakers,
+    setSneakers
 }) {
     return (
         <div className={styles.cartPage} > {/* do grid not table */}
@@ -19,7 +22,7 @@ export function CartItem({
                             <img src={`/main/${picture}`} />
                             <div className={styles.shoe}>
                                 <h3>{name}</h3>
-                                <button onClick={() => setSneakers(sneakers.filter(sneaker => sneaker.id !== shoe.id))} ></button>
+                                <button onClick={() => setSneakers(sneakers.filter(sneaker => sneaker.id !== id))} style={{backgroundColor: "red"}} >Delete</button>
                             </div>
                         </div>
                     </td>
