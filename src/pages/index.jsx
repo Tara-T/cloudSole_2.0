@@ -18,19 +18,19 @@ export default function Index() {
             alt="Cloud background with the logo"
           />
           <div id={indexStyles.cover}>
-            <form /* onSubmit={return false} */>
+            <form className={indexStyles.form}/* onSubmit={return false} */>
               <tb>
                 <td>
                   <input
                     type="text"
                     placeholder="Search"
-                    id="searchbox"
+                    id={indexStyles.searchbox}
                     required
                     autoComplete="off"
                   />
                 </td>
                 <td id={indexStyles.sCover}>
-                  <button type="submit">
+                  <button className={indexStyles.btn} type="submit">
                     <div id={indexStyles.sCircle}></div>
                     <span></span>
                   </button>
@@ -48,13 +48,9 @@ export default function Index() {
           <NavItem name="Vans" to="/brand/vans" />
           <NavItem name="Nike" to="/brand/nike" />
           <NavItem name="Nike Dunk" to="/brand/nike-dunk" />
-          <Link id="cslink" to="/cart-wishlist.html">
+          <Link id="cslink" to="cart">
             <i className="material-icons" id={styles.shoppingIcon}>shopping_basket</i>
           </Link>
-          <label className={styles.switch}>
-            <input type="checkbox" id={styles.colorPreferance} />
-            <span className={`${styles.slider} ${styles.round}`}></span>
-          </label>
         </nav>
       </header>
       <main>

@@ -25,7 +25,7 @@ export function SneakerCard({
 
 function addToCart(sneakerId) {
     const cartJSON = sessionStorage.getItem("cart")
-    const cart = JSON.parse(cartJSON || [])
+    const cart = JSON.parse(cartJSON || "[]")
     cart.push(sneakerId)
     sessionStorage.setItem("cart", JSON.stringify(cart))
 	console.debug(cart)

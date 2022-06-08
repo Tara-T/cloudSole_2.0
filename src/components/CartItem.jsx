@@ -22,7 +22,7 @@ export function CartItem({
                             <img src={`/main/${picture}`} />
                             <div className={styles.shoe}>
                                 <h3>{name}</h3>
-                                <button onClick={() => setSneakers(sneakers.filter(sneaker => sneaker.id !== id))} style={{backgroundColor: "red"}} >Delete</button>
+                                <button onClick={() => setSneakers(sneakers.filter(sneaker => sneaker.id !== id))} style={{ backgroundColor: "red" }} >Delete</button>
                             </div>
                         </div>
                     </td>
@@ -35,6 +35,7 @@ export function CartItem({
                         <td>Subtotal</td>
                         <td>{price} kr</td>
                         <td>Shipping</td>
+
                         <td>Free</td>
 
 

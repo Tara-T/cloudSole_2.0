@@ -41,7 +41,7 @@ export function SneakerInfo({
     return (
 
         <div className={styles.mainGrid}>
-            <div className={styles.mainImage}style={{height: "50%"}}>
+            <div className={styles.mainImage} style={{ height: "50%" }}>
                 <div className="slide-container" >
                     <Zoom {...zoomOutProperties}>
                         {images.map((each, index) => (
@@ -68,7 +68,7 @@ export function SneakerInfo({
                     <button>45.5</button>
                     <button>47</button>
                 </div>
-                <button className={styles.btn}   onClick={() => addToCart(id)} >ADD TO CART</button>
+                <button className={styles.btn} onClick={() => {if ((sessionStorage.getItem("cart") || "").includes(id)) return alert("No duplicates allowed opsy");addToCart(id)}} >ADD TO CART</button>
                 <h3>Information about the product</h3>
                 <p>{description}</p>
                 <hr />
@@ -90,7 +90,9 @@ function addToCart(sneakerId) {
     cart.push(sneakerId)
     sessionStorage.setItem("cart", JSON.stringify(cart))
     console.debug(cart)
-    
-  }
-  
+
+    console.log(sessionStorage.getItem("cart"), sneakerId, sessionStorage.getItem("cart").includes(sneakerId))
+
+}
+
 

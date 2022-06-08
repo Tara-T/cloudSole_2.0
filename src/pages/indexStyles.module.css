@@ -54,8 +54,8 @@ a {
   margin-bottom: 5%;
 }
 /* search box (should probably get its own file) */
-input,
-button {
+#searchbox input,
+.btn {
   color: #fff;
   font-family: Nunito;
   padding: 0;
@@ -78,11 +78,11 @@ button {
   transform: scale(0.6);
 }
 
-form {
+.form {
   height: 96px;
 }
 
-input[type="text"] {
+#searchbox input[type="text"] {
   color: #ffffff;
   width: 100%;
   height: 96px;
@@ -90,7 +90,7 @@ input[type="text"] {
   line-height: 1;
 }
 
-input[type="text"]::placeholder {
+#searchbox input[type="text"]::placeholder {
   color: #ffffff;
 }
 
@@ -99,7 +99,7 @@ input[type="text"]::placeholder {
   padding-left: 35px;
 }
 
-button {
+.btn {
   position: relative;
   display: block;
   width: 84px;
@@ -121,7 +121,7 @@ button {
   transition: 0.5s ease all;
 }
 
-button span {
+.btn span {
   position: absolute;
   top: 68px;
   left: 43px;
@@ -134,8 +134,8 @@ button span {
   transition: 0.5s ease all;
 }
 
-button span:before,
-button span:after {
+.btn span:before,
+.btn span:after {
   content: "";
   position: absolute;
   bottom: 0;
