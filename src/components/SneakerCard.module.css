@@ -34,8 +34,6 @@
 
 .btn, .price {
 	display: inline-block;
-	
-	
 }
 .btn:hover {
   transform: scale(0.9);

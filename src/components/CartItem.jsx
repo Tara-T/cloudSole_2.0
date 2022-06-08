@@ -15,6 +15,7 @@ export function CartItem({
                 <tr>
                     <th>Product</th>
                     <th>Subtotal</th>
+                    <th>Quantity</th>
                 </tr>
                 <tr>
                     <td>
@@ -26,9 +27,11 @@ export function CartItem({
                             </div>
                         </div>
                     </td>
+                    <td><input type="number" min="1" max="5" value="1"/></td>
                     <td><h4>{price} kr</h4></td>
                 </tr>
             </table>
+            
             <div className={styles.totalPrice}>
                 <table>
                     <tr>

@@ -77,10 +77,7 @@ export default function Index() {
               Click here to buy
             </Link>
           </div>
-          <h2>Recommended</h2>
-          <section className={indexStyles.recommended}></section>
         </section>
-        <div id={indexStyles.recTitle}></div>
       </main>
     </div>
   );

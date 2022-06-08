@@ -16,7 +16,7 @@ export function SneakerCard({
 				
 			</Link>
 			<h4 className={styles.price}>{price} kr</h4>
-			<button className={styles.btn}  onClick={() => addToCart(id)} >
+			<button className={styles.btn}  onClick={() => {if ((sessionStorage.getItem("cart") || "").includes(id)) return alert("No duplicates allowed opsy");addToCart(id)}} >
 				Add to cart
 			</button>
 		</div>
